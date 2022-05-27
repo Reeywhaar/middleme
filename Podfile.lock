@@ -1,0 +1,22 @@
+PODS:
+  - OpenMultitouchSupport (1.1)
+
+DEPENDENCIES:
+  - OpenMultitouchSupport (from `https://github.com/Reeywhaar/OpenMultitouchSupport.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  OpenMultitouchSupport:
+    :branch: master
+    :git: https://github.com/Reeywhaar/OpenMultitouchSupport.git
+
+CHECKOUT OPTIONS:
+  OpenMultitouchSupport:
+    :commit: 1f23e8672346e79609e555f414a5f3f76a5b9fa9
+    :git: https://github.com/Reeywhaar/OpenMultitouchSupport.git
+
+SPEC CHECKSUMS:
+  OpenMultitouchSupport: e0b58ae152839af68dc6cd0fa1848fce4fdf51f2
+
+PODFILE CHECKSUM: 65dd41fc4efae9a2ef2a010998f37049ed63727d
+
+COCOAPODS: 1.11.3

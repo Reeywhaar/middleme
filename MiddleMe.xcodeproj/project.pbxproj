@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		462ACF873765FF8340B5BA99 /* Pods_MiddleMe_MiddleMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5266272282338629CE9A05 /* Pods_MiddleMe_MiddleMeUITests.framework */; };
+		89FE7C16169BDA1C79D75267 /* Pods_MiddleMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */; };
+		932E88975982F977FC9B9E97 /* Pods_MiddleMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */; };
+		F372A4D828417C3100C7BCA7 /* LaunchAgent+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F372A4D728417C3100C7BCA7 /* LaunchAgent+Extensions.swift */; };
+		F388F6CA2841650A00DA8F11 /* LaunchAgent in Frameworks */ = {isa = PBXBuildFile; productRef = F388F6C92841650A00DA8F11 /* LaunchAgent */; };
+		F3CE2CAA283FFCB30081B57D /* MiddleMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */; };
+		F3CE2CAC283FFCB30081B57D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CAB283FFCB30081B57D /* ContentView.swift */; };
+		F3CE2CAE283FFCB40081B57D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CE2CAD283FFCB40081B57D /* Assets.xcassets */; };
+		F3CE2CB1283FFCB40081B57D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CE2CB0283FFCB40081B57D /* Preview Assets.xcassets */; };
+		F3CE2CBC283FFCB50081B57D /* MiddleMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CBB283FFCB50081B57D /* MiddleMeTests.swift */; };
+		F3CE2CC6283FFCB50081B57D /* MiddleMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CC5283FFCB50081B57D /* MiddleMeUITests.swift */; };
+		F3CE2CC8283FFCB50081B57D /* MiddleMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CC7283FFCB50081B57D /* MiddleMeUITestsLaunchTests.swift */; };
+		F3CE2CD5283FFFE40081B57D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CD4283FFFE40081B57D /* Box.swift */; };
+		F3CE2CD728400C7B0081B57D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CD628400C7B0081B57D /* Settings.swift */; };
+		F3CE2CD928400E250081B57D /* GlobalEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CD828400E250081B57D /* GlobalEventMonitor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3CE2CB8283FFCB50081B57D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3CE2C9E283FFCB30081B57D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3CE2CA5283FFCB30081B57D;
+			remoteInfo = MiddleMe;
+		};
+		F3CE2CC2283FFCB50081B57D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3CE2C9E283FFCB30081B57D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3CE2CA5283FFCB30081B57D;
+			remoteInfo = MiddleMe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CC4C11E8608F35A091768A9 /* Pods-MiddleMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMeTests.debug.xcconfig"; path = "Target Support Files/Pods-MiddleMeTests/Pods-MiddleMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B55219A5349C9D145F8BDB6 /* Pods-MiddleMe-MiddleMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe-MiddleMeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MiddleMe-MiddleMeUITests/Pods-MiddleMe-MiddleMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4517BFAE59AAC6E3151724F0 /* Pods-MiddleMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMeTests.release.xcconfig"; path = "Target Support Files/Pods-MiddleMeTests/Pods-MiddleMeTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D5266272282338629CE9A05 /* Pods_MiddleMe_MiddleMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiddleMe_MiddleMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		616814869F9884094BD5B62B /* Pods-MiddleMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe.release.xcconfig"; path = "Target Support Files/Pods-MiddleMe/Pods-MiddleMe.release.xcconfig"; sourceTree = "<group>"; };
+		B440BC222EAF3CAF0918F096 /* Pods-MiddleMe-MiddleMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe-MiddleMeUITests.release.xcconfig"; path = "Target Support Files/Pods-MiddleMe-MiddleMeUITests/Pods-MiddleMe-MiddleMeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiddleMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiddleMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E778EE8E3C4D84613F24E1BE /* Pods-MiddleMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe.debug.xcconfig"; path = "Target Support Files/Pods-MiddleMe/Pods-MiddleMe.debug.xcconfig"; sourceTree = "<group>"; };
+		F303CA8E28403A61002B603D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F372A4D728417C3100C7BCA7 /* LaunchAgent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchAgent+Extensions.swift"; sourceTree = "<group>"; };
+		F3CE2CA6283FFCB30081B57D /* MiddleMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiddleMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeApp.swift; sourceTree = "<group>"; };
+		F3CE2CAB283FFCB30081B57D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F3CE2CAD283FFCB40081B57D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3CE2CB0283FFCB40081B57D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F3CE2CB2283FFCB40081B57D /* MiddleMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiddleMe.entitlements; sourceTree = "<group>"; };
+		F3CE2CB7283FFCB50081B57D /* MiddleMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiddleMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CE2CBB283FFCB50081B57D /* MiddleMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeTests.swift; sourceTree = "<group>"; };
+		F3CE2CC1283FFCB50081B57D /* MiddleMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiddleMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CE2CC5283FFCB50081B57D /* MiddleMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeUITests.swift; sourceTree = "<group>"; };
+		F3CE2CC7283FFCB50081B57D /* MiddleMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F3CE2CD4283FFFE40081B57D /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		F3CE2CD628400C7B0081B57D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F3CE2CD828400E250081B57D /* GlobalEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEventMonitor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3CE2CA3283FFCB30081B57D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932E88975982F977FC9B9E97 /* Pods_MiddleMe.framework in Frameworks */,
+				F388F6CA2841650A00DA8F11 /* LaunchAgent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3CE2CB4283FFCB50081B57D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89FE7C16169BDA1C79D75267 /* Pods_MiddleMeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3CE2CBE283FFCB50081B57D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462ACF873765FF8340B5BA99 /* Pods_MiddleMe_MiddleMeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D3CD19745BF1FA4FE5BA91E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */,
+				4D5266272282338629CE9A05 /* Pods_MiddleMe_MiddleMeUITests.framework */,
+				C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88E785F6CC92A73D8EF6FEBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E778EE8E3C4D84613F24E1BE /* Pods-MiddleMe.debug.xcconfig */,
+				616814869F9884094BD5B62B /* Pods-MiddleMe.release.xcconfig */,
+				3B55219A5349C9D145F8BDB6 /* Pods-MiddleMe-MiddleMeUITests.debug.xcconfig */,
+				B440BC222EAF3CAF0918F096 /* Pods-MiddleMe-MiddleMeUITests.release.xcconfig */,
+				2CC4C11E8608F35A091768A9 /* Pods-MiddleMeTests.debug.xcconfig */,
+				4517BFAE59AAC6E3151724F0 /* Pods-MiddleMeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3CE2C9D283FFCB30081B57D = {
+			isa = PBXGroup;
+			children = (
+				F3CE2CA8283FFCB30081B57D /* MiddleMe */,
+				F3CE2CBA283FFCB50081B57D /* MiddleMeTests */,
+				F3CE2CC4283FFCB50081B57D /* MiddleMeUITests */,
+				F3CE2CA7283FFCB30081B57D /* Products */,
+				88E785F6CC92A73D8EF6FEBF /* Pods */,
+				0D3CD19745BF1FA4FE5BA91E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3CE2CA7283FFCB30081B57D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3CE2CA6283FFCB30081B57D /* MiddleMe.app */,
+				F3CE2CB7283FFCB50081B57D /* MiddleMeTests.xctest */,
+				F3CE2CC1283FFCB50081B57D /* MiddleMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3CE2CA8283FFCB30081B57D /* MiddleMe */ = {
+			isa = PBXGroup;
+			children = (
+				F303CA8E28403A61002B603D /* Info.plist */,
+				F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */,
+				F372A4D728417C3100C7BCA7 /* LaunchAgent+Extensions.swift */,
+				F3CE2CD828400E250081B57D /* GlobalEventMonitor.swift */,
+				F3CE2CD628400C7B0081B57D /* Settings.swift */,
+				F3CE2CD4283FFFE40081B57D /* Box.swift */,
+				F3CE2CAB283FFCB30081B57D /* ContentView.swift */,
+				F3CE2CAD283FFCB40081B57D /* Assets.xcassets */,
+				F3CE2CB2283FFCB40081B57D /* MiddleMe.entitlements */,
+				F3CE2CAF283FFCB40081B57D /* Preview Content */,
+			);
+			path = MiddleMe;
+			sourceTree = "<group>";
+		};
+		F3CE2CAF283FFCB40081B57D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F3CE2CB0283FFCB40081B57D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F3CE2CBA283FFCB50081B57D /* MiddleMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3CE2CBB283FFCB50081B57D /* MiddleMeTests.swift */,
+			);
+			path = MiddleMeTests;
+			sourceTree = "<group>";
+		};
+		F3CE2CC4283FFCB50081B57D /* MiddleMeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3CE2CC5283FFCB50081B57D /* MiddleMeUITests.swift */,
+				F3CE2CC7283FFCB50081B57D /* MiddleMeUITestsLaunchTests.swift */,
+			);
+			path = MiddleMeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3CE2CA5283FFCB30081B57D /* MiddleMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3CE2CCB283FFCB50081B57D /* Build configuration list for PBXNativeTarget "MiddleMe" */;
+			buildPhases = (
+				CE5C52D510C90D934B42FF30 /* [CP] Check Pods Manifest.lock */,
+				F3CE2CA2283FFCB30081B57D /* Sources */,
+				F3CE2CA3283FFCB30081B57D /* Frameworks */,
+				F3CE2CA4283FFCB30081B57D /* Resources */,
+				C69B2D432C63391AB208D63E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiddleMe;
+			packageProductDependencies = (
+				F388F6C92841650A00DA8F11 /* LaunchAgent */,
+			);
+			productName = MiddleMe;
+			productReference = F3CE2CA6283FFCB30081B57D /* MiddleMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3CE2CB6283FFCB50081B57D /* MiddleMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3CE2CCE283FFCB50081B57D /* Build configuration list for PBXNativeTarget "MiddleMeTests" */;
+			buildPhases = (
+				C49D04520E0F396F95794632 /* [CP] Check Pods Manifest.lock */,
+				F3CE2CB3283FFCB50081B57D /* Sources */,
+				F3CE2CB4283FFCB50081B57D /* Frameworks */,
+				F3CE2CB5283FFCB50081B57D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3CE2CB9283FFCB50081B57D /* PBXTargetDependency */,
+			);
+			name = MiddleMeTests;
+			productName = MiddleMeTests;
+			productReference = F3CE2CB7283FFCB50081B57D /* MiddleMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3CE2CC0283FFCB50081B57D /* MiddleMeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3CE2CD1283FFCB50081B57D /* Build configuration list for PBXNativeTarget "MiddleMeUITests" */;
+			buildPhases = (
+				CBB2E098F47FE74328CF6A5F /* [CP] Check Pods Manifest.lock */,
+				F3CE2CBD283FFCB50081B57D /* Sources */,
+				F3CE2CBE283FFCB50081B57D /* Frameworks */,
+				F3CE2CBF283FFCB50081B57D /* Resources */,
+				EB2225D8745B80EAB3F512C5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3CE2CC3283FFCB50081B57D /* PBXTargetDependency */,
+			);
+			name = MiddleMeUITests;
+			productName = MiddleMeUITests;
+			productReference = F3CE2CC1283FFCB50081B57D /* MiddleMeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3CE2C9E283FFCB30081B57D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					F3CE2CA5283FFCB30081B57D = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					F3CE2CB6283FFCB50081B57D = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = F3CE2CA5283FFCB30081B57D;
+					};
+					F3CE2CC0283FFCB50081B57D = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = F3CE2CA5283FFCB30081B57D;
+					};
+				};
+			};
+			buildConfigurationList = F3CE2CA1283FFCB30081B57D /* Build configuration list for PBXProject "MiddleMe" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3CE2C9D283FFCB30081B57D;
+			packageReferences = (
+				F388F6C82841650A00DA8F11 /* XCRemoteSwiftPackageReference "LaunchAgent" */,
+			);
+			productRefGroup = F3CE2CA7283FFCB30081B57D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3CE2CA5283FFCB30081B57D /* MiddleMe */,
+				F3CE2CB6283FFCB50081B57D /* MiddleMeTests */,
+				F3CE2CC0283FFCB50081B57D /* MiddleMeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3CE2CA4283FFCB30081B57D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3CE2CB1283FFCB40081B57D /* Preview Assets.xcassets in Resources */,
+				F3CE2CAE283FFCB40081B57D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3CE2CB5283FFCB50081B57D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3CE2CBF283FFCB50081B57D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C49D04520E0F396F95794632 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiddleMeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69B2D432C63391AB208D63E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiddleMe/Pods-MiddleMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiddleMe/Pods-MiddleMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiddleMe/Pods-MiddleMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBB2E098F47FE74328CF6A5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiddleMe-MiddleMeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE5C52D510C90D934B42FF30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiddleMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB2225D8745B80EAB3F512C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiddleMe-MiddleMeUITests/Pods-MiddleMe-MiddleMeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiddleMe-MiddleMeUITests/Pods-MiddleMe-MiddleMeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiddleMe-MiddleMeUITests/Pods-MiddleMe-MiddleMeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3CE2CA2283FFCB30081B57D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F372A4D828417C3100C7BCA7 /* LaunchAgent+Extensions.swift in Sources */,
+				F3CE2CD5283FFFE40081B57D /* Box.swift in Sources */,
+				F3CE2CD928400E250081B57D /* GlobalEventMonitor.swift in Sources */,
+				F3CE2CAC283FFCB30081B57D /* ContentView.swift in Sources */,
+				F3CE2CD728400C7B0081B57D /* Settings.swift in Sources */,
+				F3CE2CAA283FFCB30081B57D /* MiddleMeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3CE2CB3283FFCB50081B57D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3CE2CBC283FFCB50081B57D /* MiddleMeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3CE2CBD283FFCB50081B57D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3CE2CC8283FFCB50081B57D /* MiddleMeUITestsLaunchTests.swift in Sources */,
+				F3CE2CC6283FFCB50081B57D /* MiddleMeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3CE2CB9283FFCB50081B57D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3CE2CA5283FFCB30081B57D /* MiddleMe */;
+			targetProxy = F3CE2CB8283FFCB50081B57D /* PBXContainerItemProxy */;
+		};
+		F3CE2CC3283FFCB50081B57D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3CE2CA5283FFCB30081B57D /* MiddleMe */;
+			targetProxy = F3CE2CC2283FFCB50081B57D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F3CE2CC9283FFCB50081B57D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3CE2CCA283FFCB50081B57D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F3CE2CCC283FFCB50081B57D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E778EE8E3C4D84613F24E1BE /* Pods-MiddleMe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MiddleMe/MiddleMe.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiddleMe/Preview Content\"";
+				DEVELOPMENT_TEAM = B427SV8LA5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiddleMe/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.MiddleMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F3CE2CCD283FFCB50081B57D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 616814869F9884094BD5B62B /* Pods-MiddleMe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MiddleMe/MiddleMe.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MiddleMe/Preview Content\"";
+				DEVELOPMENT_TEAM = B427SV8LA5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MiddleMe/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.MiddleMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F3CE2CCF283FFCB50081B57D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC4C11E8608F35A091768A9 /* Pods-MiddleMeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.ios.MiddleMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiddleMe.app/Contents/MacOS/MiddleMe";
+			};
+			name = Debug;
+		};
+		F3CE2CD0283FFCB50081B57D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4517BFAE59AAC6E3151724F0 /* Pods-MiddleMeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.ios.MiddleMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiddleMe.app/Contents/MacOS/MiddleMe";
+			};
+			name = Release;
+		};
+		F3CE2CD2283FFCB50081B57D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B55219A5349C9D145F8BDB6 /* Pods-MiddleMe-MiddleMeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.ios.MiddleMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MiddleMe;
+			};
+			name = Debug;
+		};
+		F3CE2CD3283FFCB50081B57D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B440BC222EAF3CAF0918F096 /* Pods-MiddleMe-MiddleMeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.ios.MiddleMeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MiddleMe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3CE2CA1283FFCB30081B57D /* Build configuration list for PBXProject "MiddleMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CE2CC9283FFCB50081B57D /* Debug */,
+				F3CE2CCA283FFCB50081B57D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3CE2CCB283FFCB50081B57D /* Build configuration list for PBXNativeTarget "MiddleMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CE2CCC283FFCB50081B57D /* Debug */,
+				F3CE2CCD283FFCB50081B57D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3CE2CCE283FFCB50081B57D /* Build configuration list for PBXNativeTarget "MiddleMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CE2CCF283FFCB50081B57D /* Debug */,
+				F3CE2CD0283FFCB50081B57D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3CE2CD1283FFCB50081B57D /* Build configuration list for PBXNativeTarget "MiddleMeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CE2CD2283FFCB50081B57D /* Debug */,
+				F3CE2CD3283FFCB50081B57D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F388F6C82841650A00DA8F11 /* XCRemoteSwiftPackageReference "LaunchAgent" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emorydunn/LaunchAgent";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F388F6C92841650A00DA8F11 /* LaunchAgent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F388F6C82841650A00DA8F11 /* XCRemoteSwiftPackageReference "LaunchAgent" */;
+			productName = LaunchAgent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F3CE2C9E283FFCB30081B57D /* Project object */;
+}
