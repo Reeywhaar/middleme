@@ -22,7 +22,7 @@ struct ContentView: View {
                     }.padding()
                     
                     Button(OPEN_PREFERENCES, action: {
-                        NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility")!)
+                        settings.requireAccess()
                     })
                     
                     Spacer().frame(height: 20)

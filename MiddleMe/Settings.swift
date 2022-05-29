@@ -11,7 +11,7 @@ import SwiftUI
 class Settings: ObservableObject {
     @Published var permissionGranted = false
     
-    public func checkAccess(){
+    public func requireAccess(){
         //get the value for accesibility
         let checkOptPrompt = kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String
         //set the options: false means it wont ask
@@ -20,5 +20,9 @@ class Settings: ObservableObject {
         //translate into boolean value
         
         permissionGranted = AXIsProcessTrustedWithOptions(options as CFDictionary?)
+    }
+    
+    public func checkAccess(){
+        permissionGranted = AXIsProcessTrusted()
     }
 }

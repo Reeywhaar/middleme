@@ -32,11 +32,14 @@ struct MiddleMeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().onAppear{
-                settings.checkAccess()
+                settings.requireAccess()
             }
             .environmentObject(settings)
             .fixedSize()
             .preferredColorScheme(.dark)
+            .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { (_) in
+                settings.checkAccess()
+            }
         }
     }
     
