@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import OpenMultitouchSupport
+import Combine
 
 class GlobalEventMonitor {
     private var listener: OpenMTListener?
@@ -16,15 +17,42 @@ class GlobalEventMonitor {
     private var startCoordinates: NSPoint = .zero
     private var lastCoordinates: NSPoint = .zero
     private var maxTouches = 0
+    private var cancellables: [AnyCancellable] = []
+    private var shouldStart = false
 
     deinit {
         stop()
     }
+    
+    public func register() {
+        NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.willSleepNotification).sink(receiveValue: { [weak self] (_) in
+            self?.shouldStart = false
+            print("SLEEP")
+            self?.stop()
+        }).store(in: &cancellables)
+        
+        NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.didWakeNotification).sink(receiveValue: { [weak self] (_) in
+            self?.shouldStart = true
+            // Adding delay to make it work on M1 cpu
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                if self == nil || !self!.shouldStart { return }
+                print("WAKE")
+                self?.start()
+            })
+        }).store(in: &cancellables)
+    }
 
     public func start() {
-        print("Start!")
+        if listener != nil { return }
         let manager = OpenMTManager.shared()
         listener = manager?.addListener(withTarget: self, selector: #selector(process))
+    }
+    
+    public func stop() {
+        if let listener = listener {
+            OpenMTManager.shared()?.remove(listener)
+        }
+        listener = nil
     }
     
     @objc func process(_ event: OpenMTEvent) {
@@ -58,13 +86,6 @@ class GlobalEventMonitor {
             touchesInterval = 0
             maxTouches = 0
         }
-    }
-
-    public func stop() {
-        if let listener = listener {
-            OpenMTManager.shared()?.remove(listener)
-        }
-        listener = nil
     }
     
     private func generateMiddleClick() {

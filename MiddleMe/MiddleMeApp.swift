@@ -17,6 +17,7 @@ struct MiddleMeApp: App {
     init() {
         handler.value = GlobalEventMonitor()
         handler.value?.start()
+        handler.value?.register()
 
         do {
             let agent = try getAgent()
