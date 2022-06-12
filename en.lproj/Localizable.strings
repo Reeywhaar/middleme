@@ -1,0 +1,16 @@
+/* No comment provided by engineer. */
+"ContentView.ACCESS_NOT_GRANTED" = "Accessibility access forbidden";
+
+/* No comment provided by engineer. */
+"ContentView.CLOSED_TEXT" = "This window can be closed.";
+
+/* No comment provided by engineer. */
+"ContentView.DESCRIPTION_TEXT" = "To quit app press cmd+Q
+
+App auto restarts on reboot if it wasn't explicitly quit.
+
+To reopen this window, just click app icon again.";
+
+/* No comment provided by engineer. */
+"ContentView.OPEN_PREFERENCES" = "Open preferences";
+

@@ -10,6 +10,7 @@
 		462ACF873765FF8340B5BA99 /* Pods_MiddleMe_MiddleMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5266272282338629CE9A05 /* Pods_MiddleMe_MiddleMeUITests.framework */; };
 		89FE7C16169BDA1C79D75267 /* Pods_MiddleMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */; };
 		932E88975982F977FC9B9E97 /* Pods_MiddleMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */; };
+		F3663A7A2856A362001BD4F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3663A7C2856A362001BD4F3 /* Localizable.strings */; };
 		F372A4D828417C3100C7BCA7 /* LaunchAgent+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F372A4D728417C3100C7BCA7 /* LaunchAgent+Extensions.swift */; };
 		F388F6CA2841650A00DA8F11 /* LaunchAgent in Frameworks */ = {isa = PBXBuildFile; productRef = F388F6C92841650A00DA8F11 /* LaunchAgent */; };
 		F3CE2CAA283FFCB30081B57D /* MiddleMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */; };
@@ -52,6 +53,8 @@
 		C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiddleMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E778EE8E3C4D84613F24E1BE /* Pods-MiddleMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe.debug.xcconfig"; path = "Target Support Files/Pods-MiddleMe/Pods-MiddleMe.debug.xcconfig"; sourceTree = "<group>"; };
 		F303CA8E28403A61002B603D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F3663A7B2856A362001BD4F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3663A7D2856A36E001BD4F3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F372A4D728417C3100C7BCA7 /* LaunchAgent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaunchAgent+Extensions.swift"; sourceTree = "<group>"; };
 		F3CE2CA6283FFCB30081B57D /* MiddleMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiddleMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeApp.swift; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		F3CE2C9D283FFCB30081B57D = {
 			isa = PBXGroup;
 			children = (
+				F3663A7C2856A362001BD4F3 /* Localizable.strings */,
 				F3CE2CA8283FFCB30081B57D /* MiddleMe */,
 				F3CE2CBA283FFCB50081B57D /* MiddleMeTests */,
 				F3CE2CC4283FFCB50081B57D /* MiddleMeUITests */,
@@ -279,6 +283,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = F3CE2C9D283FFCB30081B57D;
 			packageReferences = (
@@ -301,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3CE2CB1283FFCB40081B57D /* Preview Assets.xcassets in Resources */,
+				F3663A7A2856A362001BD4F3 /* Localizable.strings in Resources */,
 				F3CE2CAE283FFCB40081B57D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,11 +476,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		F3663A7C2856A362001BD4F3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3663A7B2856A362001BD4F3 /* en */,
+				F3663A7D2856A36E001BD4F3 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		F3CE2CC9283FFCB50081B57D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -535,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

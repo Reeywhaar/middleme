@@ -1,0 +1,16 @@
+/* No comment provided by engineer. */
+"ContentView.ACCESS_NOT_GRANTED" = "Настройка универсального доступа запрещена";
+
+/* No comment provided by engineer. */
+"ContentView.CLOSED_TEXT" = "Это окно можно закрыть.";
+
+/* No comment provided by engineer. */
+"ContentView.DESCRIPTION_TEXT" = "Чтобы выйти из приложения нажмите cmd+Q.
+
+Приложение автоматически запускается при перезагрузке если из неё не вышли явно.
+
+Чтобы опять открыть это окно кликните дважды по иконке приложения.";
+
+/* No comment provided by engineer. */
+"ContentView.OPEN_PREFERENCES" = "Открыть настройки";
+
