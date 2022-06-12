@@ -30,6 +30,14 @@ jobs:
           DISTRIBUTION_CERT_BASE_64: ${{ secrets.DISTRIBUTION_CERT_BASE_64 }}
           DISTRIBUTION_CERT_PASS: ${{ secrets.DISTRIBUTION_CERT_PASS }}
 
+      - name: "Configure notarytool"
+        run: >
+          xcrun notarytool store-credentials notarytool --apple-id $APPLE_ID --team-id $TEAM_ID --password $NOTARY_TOOL_PASS
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          NOTARY_TOOL_PASS: ${{ secrets.NOTARY_TOOL_PASS }}
+          TEAM_ID: ${{ secrets.TEAM_ID }}
+
       - name: "Install pods"
         run: pod install
 
@@ -38,6 +46,9 @@ jobs:
 
       - name: "Zip App"
         run: pushd middleme.xcarchive/Products/Applications && zip --symlinks -r ../../../MiddleMe.zip MiddleMe.app && popd
+
+      - name: "Notarize app"
+        run: xcrun notarytool submit MiddleMe.zip --keychain-profile notarytool --wait
 
       - name: "Create Release"
         uses: softprops/action-gh-release@78c309ef59fdb9557cd6574f2e0be552936ed728
