@@ -32,9 +32,7 @@ struct MiddleMeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().onAppear{
-                settings.requireAccess()
-            }
+            ContentView()
             .environmentObject(settings)
             .fixedSize()
             .preferredColorScheme(.dark)
