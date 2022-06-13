@@ -1,3 +1,7 @@
+# 1.3
+
+- Fixed permission check
+
 # 1.2
 
 - Added localization
