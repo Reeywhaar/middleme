@@ -38,7 +38,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(Settings())
+        let s1 = Settings()
+        let s2 = Settings()
+        let _ = {s2.permissionGranted = true}()
+        
+        ContentView().environmentObject(s1)
+        ContentView().environmentObject(s2)
     }
 }
 
