@@ -27,7 +27,6 @@ class GlobalEventMonitor {
     public func register() {
         NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.willSleepNotification).sink(receiveValue: { [weak self] (_) in
             self?.shouldStart = false
-            print("SLEEP")
             self?.stop()
         }).store(in: &cancellables)
         
@@ -36,7 +35,6 @@ class GlobalEventMonitor {
             // Adding delay to make it work on M1 cpu
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                 if self == nil || !self!.shouldStart { return }
-                print("WAKE")
                 self?.start()
             })
         }).store(in: &cancellables)
