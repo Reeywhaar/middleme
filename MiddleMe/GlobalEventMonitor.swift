@@ -77,7 +77,13 @@ class GlobalEventMonitor {
                 let distance = distance(startCoordinates, lastCoordinates)
                 let isSwipe = distance >= 0.005
                 
-                if !isSwipe { generateMiddleClick() }
+                if !isSwipe {
+                    #if DEBUG
+                        print("TAP!")
+                    #else
+                        generateMiddleClick()
+                    #endif
+                }
             }
             
             startCoordinates = .zero
