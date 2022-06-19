@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "launchagent",
+      "identity" : "launchatlogin",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/emorydunn/LaunchAgent",
+      "location" : "https://github.com/sindresorhus/LaunchAtLogin",
       "state" : {
-        "revision" : "9f6d33abfa4a0a45a877e9b884391981c1f4152b",
-        "version" : "0.3.0"
+        "branch" : "v4.2.0",
+        "revision" : "e8171b3e38a2816f579f58f3dac1522aa39efe41"
       }
     }
   ],
