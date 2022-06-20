@@ -1,3 +1,8 @@
+# 1.4
+
+- Fixed typo
+- Use LaunchAtLogin package to launch at login
+
 # 1.3
 
 - Fixed permission check
