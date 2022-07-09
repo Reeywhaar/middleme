@@ -1,6 +1,6 @@
 # MiddleMe
 
-![Icon](design/icon-128.png)
+![Icon](design/logo-128.png)
 
 Simple app to make trackpad treat triple tap as middle click
 
