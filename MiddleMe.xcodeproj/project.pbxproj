@@ -19,7 +19,6 @@
 		F3CE2CBC283FFCB50081B57D /* MiddleMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CBB283FFCB50081B57D /* MiddleMeTests.swift */; };
 		F3CE2CC6283FFCB50081B57D /* MiddleMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CC5283FFCB50081B57D /* MiddleMeUITests.swift */; };
 		F3CE2CC8283FFCB50081B57D /* MiddleMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CC7283FFCB50081B57D /* MiddleMeUITestsLaunchTests.swift */; };
-		F3CE2CD5283FFFE40081B57D /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CD4283FFFE40081B57D /* Box.swift */; };
 		F3CE2CD728400C7B0081B57D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CD628400C7B0081B57D /* Settings.swift */; };
 		F3CE2CD928400E250081B57D /* GlobalEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CD828400E250081B57D /* GlobalEventMonitor.swift */; };
 /* End PBXBuildFile section */
@@ -65,7 +64,6 @@
 		F3CE2CC1283FFCB50081B57D /* MiddleMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiddleMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2CC5283FFCB50081B57D /* MiddleMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeUITests.swift; sourceTree = "<group>"; };
 		F3CE2CC7283FFCB50081B57D /* MiddleMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F3CE2CD4283FFFE40081B57D /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		F3CE2CD628400C7B0081B57D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F3CE2CD828400E250081B57D /* GlobalEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +150,6 @@
 				F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */,
 				F3CE2CD828400E250081B57D /* GlobalEventMonitor.swift */,
 				F3CE2CD628400C7B0081B57D /* Settings.swift */,
-				F3CE2CD4283FFFE40081B57D /* Box.swift */,
 				F3CE2CAB283FFCB30081B57D /* ContentView.swift */,
 				F3CE2CAD283FFCB40081B57D /* Assets.xcassets */,
 				F3CE2CB2283FFCB40081B57D /* MiddleMe.entitlements */,
@@ -451,7 +448,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3CE2CD5283FFFE40081B57D /* Box.swift in Sources */,
 				F3CE2CD928400E250081B57D /* GlobalEventMonitor.swift in Sources */,
 				F3CE2CAC283FFCB30081B57D /* ContentView.swift in Sources */,
 				F3CE2CD728400C7B0081B57D /* Settings.swift in Sources */,

@@ -12,12 +12,11 @@ import LaunchAtLogin
 struct MiddleMeApp: App {
     private let settings = Settings()
     
-    private let handler = Box<GlobalEventMonitor?>(nil)
+    private let handler = GlobalEventMonitor()
     
     init() {
-        handler.value = GlobalEventMonitor()
-        handler.value?.start()
-        handler.value?.register()
+        handler.start()
+        handler.register()
 
         LaunchAtLogin.isEnabled = true
         
