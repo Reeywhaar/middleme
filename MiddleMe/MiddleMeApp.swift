@@ -7,9 +7,12 @@
 
 import SwiftUI
 import ServiceManagement
+import Carbon
 
 @main
 struct MiddleMeApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     private let settings = Settings()
 
     private let handler = GlobalEventMonitor()
@@ -18,6 +21,7 @@ struct MiddleMeApp: App {
         handler.start()
         handler.register()
 
+        appLogger.info("Registering login item")
         try? SMAppService.mainApp.register()
 
         NotificationCenter.default.addObserver(forName: NSApplication.willTerminateNotification, object: nil, queue: .main, using: self.handleTerminate)
@@ -38,7 +42,23 @@ struct MiddleMeApp: App {
     }
 
     private func handleTerminate(notification: Notification) {
-        try? SMAppService.mainApp.unregister()
+        if(appDelegate.activeExit) {
+            appLogger.info("Unregistering login item")
+            try? SMAppService.mainApp.unregister()
+        }
+    }
+}
+
+class AppDelegate: NSObject, NSApplicationDelegate {
+    var activeExit = false
+
+    @MainActor
+    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
+        let event = NSAppleEventManager.shared().currentAppleEvent
+        let reason = event?.attributeDescriptor(forKeyword: UInt32(kEventParamReason))?.typeCodeValue
+        activeExit = reason != kAEShutDown && reason != kAERestart && reason != kAEReallyLogOut
+        appLogger.info("Application will terminate \(self.activeExit ? "actively" : "passively") with reason \(reason.debugDescription)")
+        return .terminateNow
     }
 }
 

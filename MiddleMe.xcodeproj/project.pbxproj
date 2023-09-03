@@ -11,6 +11,7 @@
 		89FE7C16169BDA1C79D75267 /* Pods_MiddleMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */; };
 		932E88975982F977FC9B9E97 /* Pods_MiddleMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */; };
 		F3663A7A2856A362001BD4F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3663A7C2856A362001BD4F3 /* Localizable.strings */; };
+		F3795EA32AA53FD8006AFC22 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3795EA22AA53FD8006AFC22 /* Logger.swift */; };
 		F3CE2CAA283FFCB30081B57D /* MiddleMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */; };
 		F3CE2CAC283FFCB30081B57D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CAB283FFCB30081B57D /* ContentView.swift */; };
 		F3CE2CAE283FFCB40081B57D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CE2CAD283FFCB40081B57D /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		F303CA8E28403A61002B603D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F3663A7B2856A362001BD4F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F3663A7D2856A36E001BD4F3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3795EA22AA53FD8006AFC22 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F3CE2CA6283FFCB30081B57D /* MiddleMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiddleMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeApp.swift; sourceTree = "<group>"; };
 		F3CE2CAB283FFCB30081B57D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				F303CA8E28403A61002B603D /* Info.plist */,
 				F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */,
 				F3CE2CD828400E250081B57D /* GlobalEventMonitor.swift */,
+				F3795EA22AA53FD8006AFC22 /* Logger.swift */,
 				F3CE2CD628400C7B0081B57D /* Settings.swift */,
 				F3CE2CAB283FFCB30081B57D /* ContentView.swift */,
 				F3CE2CAD283FFCB40081B57D /* Assets.xcassets */,
@@ -444,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3795EA32AA53FD8006AFC22 /* Logger.swift in Sources */,
 				F3CE2CD928400E250081B57D /* GlobalEventMonitor.swift in Sources */,
 				F3CE2CAC283FFCB30081B57D /* ContentView.swift in Sources */,
 				F3CE2CD728400C7B0081B57D /* Settings.swift in Sources */,
