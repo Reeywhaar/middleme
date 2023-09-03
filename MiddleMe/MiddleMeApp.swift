@@ -38,6 +38,10 @@ struct MiddleMeApp: App {
             .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { (_) in
                 settings.checkAccess()
             }
+            .onAppear {
+                appLogger.info("Making app active")
+                NSApplication.shared.activate(ignoringOtherApps: true)
+            }
         }
     }
 
