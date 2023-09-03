@@ -10,7 +10,6 @@
 		462ACF873765FF8340B5BA99 /* Pods_MiddleMe_MiddleMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5266272282338629CE9A05 /* Pods_MiddleMe_MiddleMeUITests.framework */; };
 		89FE7C16169BDA1C79D75267 /* Pods_MiddleMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */; };
 		932E88975982F977FC9B9E97 /* Pods_MiddleMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */; };
-		F3364A3A285F82F20004B4D2 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F3364A39285F82F20004B4D2 /* LaunchAtLogin */; };
 		F3663A7A2856A362001BD4F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3663A7C2856A362001BD4F3 /* Localizable.strings */; };
 		F3CE2CAA283FFCB30081B57D /* MiddleMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */; };
 		F3CE2CAC283FFCB30081B57D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CAB283FFCB30081B57D /* ContentView.swift */; };
@@ -73,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3364A3A285F82F20004B4D2 /* LaunchAtLogin in Frameworks */,
 				932E88975982F977FC9B9E97 /* Pods_MiddleMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +201,6 @@
 			);
 			name = MiddleMe;
 			packageProductDependencies = (
-				F3364A39285F82F20004B4D2 /* LaunchAtLogin */,
 			);
 			productName = MiddleMe;
 			productReference = F3CE2CA6283FFCB30081B57D /* MiddleMe.app */;
@@ -282,7 +279,6 @@
 			);
 			mainGroup = F3CE2C9D283FFCB30081B57D;
 			packageReferences = (
-				F3364A38285F82F20004B4D2 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 			);
 			productRefGroup = F3CE2CA7283FFCB30081B57D /* Products */;
 			projectDirPath = "";
@@ -633,11 +629,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MiddleMe/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13;
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.MiddleMe.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -665,11 +663,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MiddleMe/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13;
 				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vyrtsev.mac.MiddleMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -791,25 +791,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F3364A38285F82F20004B4D2 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
-			requirement = {
-				branch = v4.2.0;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F3364A39285F82F20004B4D2 /* LaunchAtLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F3364A38285F82F20004B4D2 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
-			productName = LaunchAtLogin;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3CE2C9E283FFCB30081B57D /* Project object */;
 }

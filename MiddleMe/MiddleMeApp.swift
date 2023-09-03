@@ -6,23 +6,23 @@
 //
 
 import SwiftUI
-import LaunchAtLogin
+import ServiceManagement
 
 @main
 struct MiddleMeApp: App {
     private let settings = Settings()
-    
+
     private let handler = GlobalEventMonitor()
-    
+
     init() {
         handler.start()
         handler.register()
 
-        LaunchAtLogin.isEnabled = true
-        
+        try? SMAppService.mainApp.register()
+
         NotificationCenter.default.addObserver(forName: NSApplication.willTerminateNotification, object: nil, queue: .main, using: self.handleTerminate)
     }
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView().onAppear{
@@ -36,9 +36,9 @@ struct MiddleMeApp: App {
             }
         }
     }
-    
+
     private func handleTerminate(notification: Notification) {
-        LaunchAtLogin.isEnabled = false
+        try? SMAppService.mainApp.unregister()
     }
 }
 
