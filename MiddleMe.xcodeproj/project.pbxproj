@@ -195,7 +195,6 @@
 				F3CE2CA2283FFCB30081B57D /* Sources */,
 				F3CE2CA3283FFCB30081B57D /* Frameworks */,
 				F3CE2CA4283FFCB30081B57D /* Resources */,
-				F3364A3B285F832E0004B4D2 /* Launch at login helper */,
 				C69B2D432C63391AB208D63E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -421,24 +420,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiddleMe-MiddleMeUITests/Pods-MiddleMe-MiddleMeUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		F3364A3B285F832E0004B4D2 /* Launch at login helper */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Launch at login helper";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
