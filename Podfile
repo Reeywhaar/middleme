@@ -1,5 +1,4 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :osx, '13.0'
 
 target 'MiddleMe' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -17,5 +16,4 @@ target 'MiddleMe' do
   target 'MiddleMeUITests' do
     # Pods for testing
   end
-
 end
