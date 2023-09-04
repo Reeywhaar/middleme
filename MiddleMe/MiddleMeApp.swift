@@ -42,7 +42,7 @@ struct MiddleMeApp: App {
                 appLogger.info("Making app active")
                 NSApplication.shared.activate(ignoringOtherApps: true)
             }
-        }
+        }.windowResizability(.contentSize)
     }
 
     private func handleTerminate(notification: Notification) {
