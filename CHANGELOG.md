@@ -1,3 +1,8 @@
+# 1.5
+
+- Reworked start at login (now using SMAppService)
+- Make window front on app start
+
 # 1.4
 
 - Fixed typo
