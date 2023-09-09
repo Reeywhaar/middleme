@@ -52,7 +52,7 @@ jobs:
 
       - name: "Create cask env"
         run: |
-          SHA=$(shasum -a 256 -sha256 MiddleMe.zip | awk '{print $1}') && \
+          SHA=$(shasum -a 256 MiddleMe.zip | awk '{print $1}') && \
           echo "ARTEFACT_SHA256=$(echo $SHA)" >> cask.env && \
           VERSION=$(sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' ./MiddleMe.xcodeproj/project.pbxproj) && \
           echo "ARTEFACT_VERSION=$(echo $VERSION)" >> cask.env
