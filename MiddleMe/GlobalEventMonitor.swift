@@ -78,11 +78,7 @@ class GlobalEventMonitor {
                 let isSwipe = distance >= 0.005
                 
                 if !isSwipe {
-                    #if DEBUG
-                        print("TAP!")
-                    #else
-                        generateMiddleClick()
-                    #endif
+                    generateMiddleClick()
                 }
             }
             
@@ -95,14 +91,18 @@ class GlobalEventMonitor {
     private func generateMiddleClick() {
         guard let screen = getCurrentScreen() else { return }
         
+        #if DEBUG
+        print("TAP!", screen.localizedName, NSEvent.mouseLocation, screen.frame.minY)
+        #else
         var position = NSEvent.mouseLocation
-        position.y = screen.frame.height - position.y
+        position.y = screen.frame.height - (position.y - screen.frame.minY)
         let source = CGEventSource.init(stateID: .hidSystemState)
         let eventDown = CGEvent(mouseEventSource: source, mouseType: .otherMouseDown, mouseCursorPosition: position , mouseButton: .center)
         let eventUp = CGEvent(mouseEventSource: source, mouseType: .otherMouseUp, mouseCursorPosition: position , mouseButton: .center)
         eventDown?.post(tap: .cghidEventTap)
         usleep(100)
         eventUp?.post(tap: .cghidEventTap)
+        #endif
     }
     
     private func getCurrentScreen() -> NSScreen? {
