@@ -1,3 +1,7 @@
+# 1.6
+
+- Fixed possible mistaps on external displays
+
 # 1.5
 
 - Reworked start at login (now using SMAppService)
