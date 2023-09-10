@@ -13,10 +13,10 @@
 
 @interface OpenMTEvent: NSObject
 
-@property (strong, readonly) NSArray *touches;
-@property (assign, readonly) int deviceID;
-@property (assign, readonly) int frameID;
-@property (assign, readonly) double timestamp;
+@property (strong, readwrite) NSArray *touches;
+@property (assign, readwrite) int deviceID;
+@property (assign, readwrite) int frameID;
+@property (assign, readwrite) double timestamp;
 
 @end
 

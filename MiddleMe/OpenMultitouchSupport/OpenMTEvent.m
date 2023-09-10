@@ -7,7 +7,7 @@
 //
 // もしかしたらこいつ要らない
 
-#import "OpenMTEventInternal.h"
+#import "OpenMTEvent.h"
 
 @implementation OpenMTEvent
 

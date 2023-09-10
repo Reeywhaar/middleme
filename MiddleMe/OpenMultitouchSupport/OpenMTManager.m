@@ -8,10 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "OpenMTManagerInternal.h"
-#import "OpenMTListenerInternal.h"
-#import "OpenMTTouchInternal.h"
-#import "OpenMTEventInternal.h"
+#import "OpenMTManager.h"
+#import "OpenMTListener.h"
+#import "OpenMTTouch.h"
+#import "OpenMTEvent.h"
 #import "OpenMTInternal.h"
 
 @interface OpenMTManager()

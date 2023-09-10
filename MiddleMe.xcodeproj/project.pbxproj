@@ -72,16 +72,12 @@
 		F3A69CA12AAE546900B143CE /* MiddleMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiddleMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		F3A69CA42AAE55D300B143CE /* OpenMTListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTListener.h; sourceTree = "<group>"; };
 		F3A69CA52AAE55D300B143CE /* OpenMTTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTTouch.m; sourceTree = "<group>"; };
-		F3A69CA62AAE55D300B143CE /* OpenMTTouchInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTTouchInternal.h; sourceTree = "<group>"; };
 		F3A69CA72AAE55D300B143CE /* OpenMTInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTInternal.h; sourceTree = "<group>"; };
 		F3A69CA82AAE55D300B143CE /* OpenMultitouchSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMultitouchSupport.h; sourceTree = "<group>"; };
 		F3A69CA92AAE55D300B143CE /* OpenMTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTManager.m; sourceTree = "<group>"; };
 		F3A69CAA2AAE55D300B143CE /* OpenMTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTEvent.m; sourceTree = "<group>"; };
 		F3A69CAB2AAE55D300B143CE /* OpenMTTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTTouch.h; sourceTree = "<group>"; };
 		F3A69CAC2AAE55D300B143CE /* OpenMTListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTListener.m; sourceTree = "<group>"; };
-		F3A69CAD2AAE55D300B143CE /* OpenMTListenerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTListenerInternal.h; sourceTree = "<group>"; };
-		F3A69CAE2AAE55D300B143CE /* OpenMTEventInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTEventInternal.h; sourceTree = "<group>"; };
-		F3A69CAF2AAE55D300B143CE /* OpenMTManagerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTManagerInternal.h; sourceTree = "<group>"; };
 		F3A69CB02AAE55D300B143CE /* OpenMTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTEvent.h; sourceTree = "<group>"; };
 		F3A69CB22AAE55D300B143CE /* OpenMTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTManager.h; sourceTree = "<group>"; };
 		F3CE2CA6283FFCB30081B57D /* MiddleMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiddleMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,16 +140,12 @@
 				F3A69CA82AAE55D300B143CE /* OpenMultitouchSupport.h */,
 				F3A69CA72AAE55D300B143CE /* OpenMTInternal.h */,
 				F3A69CB02AAE55D300B143CE /* OpenMTEvent.h */,
-				F3A69CAE2AAE55D300B143CE /* OpenMTEventInternal.h */,
 				F3A69CAA2AAE55D300B143CE /* OpenMTEvent.m */,
 				F3A69CAB2AAE55D300B143CE /* OpenMTTouch.h */,
-				F3A69CA62AAE55D300B143CE /* OpenMTTouchInternal.h */,
 				F3A69CA52AAE55D300B143CE /* OpenMTTouch.m */,
 				F3A69CA42AAE55D300B143CE /* OpenMTListener.h */,
-				F3A69CAD2AAE55D300B143CE /* OpenMTListenerInternal.h */,
 				F3A69CAC2AAE55D300B143CE /* OpenMTListener.m */,
 				F3A69CB22AAE55D300B143CE /* OpenMTManager.h */,
-				F3A69CAF2AAE55D300B143CE /* OpenMTManagerInternal.h */,
 				F3A69CA92AAE55D300B143CE /* OpenMTManager.m */,
 			);
 			path = OpenMultitouchSupport;

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Takuto Nakamura. All rights reserved.
 //
 
-#import "OpenMTListenerInternal.h"
+#import "OpenMTListener.h"
 
 @implementation OpenMTListener {
 @private

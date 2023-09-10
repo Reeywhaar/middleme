@@ -10,8 +10,13 @@
 #define OpenMTListener_h
 
 #import <Foundation/Foundation.h>
+#import "OpenMTEvent.h"
 
 @interface OpenMTListener: NSObject
+
+- (instancetype)initWithTarget:(id)target selector:(SEL)selector;
+- (void)listenToEvent:(OpenMTEvent *)event;
+- (BOOL)dead;
 
 @property (assign, readwrite) BOOL listening;
 
