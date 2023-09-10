@@ -1,3 +1,7 @@
+# 1.7
+
+- Removed redundant and unused code
+
 # 1.6
 
 - Fixed possible mistaps on external displays
