@@ -9,9 +9,15 @@
 /* Begin PBXBuildFile section */
 		462ACF873765FF8340B5BA99 /* Pods_MiddleMe_MiddleMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5266272282338629CE9A05 /* Pods_MiddleMe_MiddleMeUITests.framework */; };
 		89FE7C16169BDA1C79D75267 /* Pods_MiddleMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */; };
-		932E88975982F977FC9B9E97 /* Pods_MiddleMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */; };
 		F3663A7A2856A362001BD4F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3663A7C2856A362001BD4F3 /* Localizable.strings */; };
+		F3685AE82AAE513500901633 /* MultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3685AE72AAE513400901633 /* MultitouchSupport.framework */; };
+		F3685AE92AAE513500901633 /* MultitouchSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3685AE72AAE513400901633 /* MultitouchSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3795EA32AA53FD8006AFC22 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3795EA22AA53FD8006AFC22 /* Logger.swift */; };
+		F37B36232AAE58900054E184 /* OpenMTTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CA52AAE55D300B143CE /* OpenMTTouch.m */; };
+		F37B36242AAE58920054E184 /* OpenMTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CA92AAE55D300B143CE /* OpenMTManager.m */; };
+		F37B36252AAE58940054E184 /* OpenMTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CAA2AAE55D300B143CE /* OpenMTEvent.m */; };
+		F37B36262AAE58960054E184 /* OpenMTListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CAC2AAE55D300B143CE /* OpenMTListener.m */; };
+		F3A69CA22AAE54B400B143CE /* MiddleMe-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CA12AAE546900B143CE /* MiddleMe-Bridging-Header.h */; };
 		F3CE2CAA283FFCB30081B57D /* MiddleMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */; };
 		F3CE2CAC283FFCB30081B57D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CAB283FFCB30081B57D /* ContentView.swift */; };
 		F3CE2CAE283FFCB40081B57D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CE2CAD283FFCB40081B57D /* Assets.xcassets */; };
@@ -40,20 +46,44 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F3685AEA2AAE513500901633 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F3685AE92AAE513500901633 /* MultitouchSupport.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2CC4C11E8608F35A091768A9 /* Pods-MiddleMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMeTests.debug.xcconfig"; path = "Target Support Files/Pods-MiddleMeTests/Pods-MiddleMeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3B55219A5349C9D145F8BDB6 /* Pods-MiddleMe-MiddleMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe-MiddleMeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MiddleMe-MiddleMeUITests/Pods-MiddleMe-MiddleMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4517BFAE59AAC6E3151724F0 /* Pods-MiddleMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMeTests.release.xcconfig"; path = "Target Support Files/Pods-MiddleMeTests/Pods-MiddleMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		4D5266272282338629CE9A05 /* Pods_MiddleMe_MiddleMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiddleMe_MiddleMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		616814869F9884094BD5B62B /* Pods-MiddleMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe.release.xcconfig"; path = "Target Support Files/Pods-MiddleMe/Pods-MiddleMe.release.xcconfig"; sourceTree = "<group>"; };
-		B440BC222EAF3CAF0918F096 /* Pods-MiddleMe-MiddleMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe-MiddleMeUITests.release.xcconfig"; path = "Target Support Files/Pods-MiddleMe-MiddleMeUITests/Pods-MiddleMe-MiddleMeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiddleMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiddleMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E778EE8E3C4D84613F24E1BE /* Pods-MiddleMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiddleMe.debug.xcconfig"; path = "Target Support Files/Pods-MiddleMe/Pods-MiddleMe.debug.xcconfig"; sourceTree = "<group>"; };
 		F303CA8E28403A61002B603D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F3663A7B2856A362001BD4F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F3663A7D2856A36E001BD4F3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3685AE72AAE513400901633 /* MultitouchSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultitouchSupport.framework; path = ../../../../../System/Library/PrivateFrameworks/MultitouchSupport.framework; sourceTree = "<group>"; };
 		F3795EA22AA53FD8006AFC22 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F3A69CA12AAE546900B143CE /* MiddleMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiddleMe-Bridging-Header.h"; sourceTree = "<group>"; };
+		F3A69CA42AAE55D300B143CE /* OpenMTListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTListener.h; sourceTree = "<group>"; };
+		F3A69CA52AAE55D300B143CE /* OpenMTTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTTouch.m; sourceTree = "<group>"; };
+		F3A69CA62AAE55D300B143CE /* OpenMTTouchInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTTouchInternal.h; sourceTree = "<group>"; };
+		F3A69CA72AAE55D300B143CE /* OpenMTInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTInternal.h; sourceTree = "<group>"; };
+		F3A69CA82AAE55D300B143CE /* OpenMultitouchSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMultitouchSupport.h; sourceTree = "<group>"; };
+		F3A69CA92AAE55D300B143CE /* OpenMTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTManager.m; sourceTree = "<group>"; };
+		F3A69CAA2AAE55D300B143CE /* OpenMTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTEvent.m; sourceTree = "<group>"; };
+		F3A69CAB2AAE55D300B143CE /* OpenMTTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTTouch.h; sourceTree = "<group>"; };
+		F3A69CAC2AAE55D300B143CE /* OpenMTListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTListener.m; sourceTree = "<group>"; };
+		F3A69CAD2AAE55D300B143CE /* OpenMTListenerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTListenerInternal.h; sourceTree = "<group>"; };
+		F3A69CAE2AAE55D300B143CE /* OpenMTEventInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTEventInternal.h; sourceTree = "<group>"; };
+		F3A69CAF2AAE55D300B143CE /* OpenMTManagerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTManagerInternal.h; sourceTree = "<group>"; };
+		F3A69CB02AAE55D300B143CE /* OpenMTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTEvent.h; sourceTree = "<group>"; };
+		F3A69CB22AAE55D300B143CE /* OpenMTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTManager.h; sourceTree = "<group>"; };
 		F3CE2CA6283FFCB30081B57D /* MiddleMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiddleMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeApp.swift; sourceTree = "<group>"; };
 		F3CE2CAB283FFCB30081B57D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				932E88975982F977FC9B9E97 /* Pods_MiddleMe.framework in Frameworks */,
+				F3685AE82AAE513500901633 /* MultitouchSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +130,7 @@
 		0D3CD19745BF1FA4FE5BA91E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3685AE72AAE513400901633 /* MultitouchSupport.framework */,
 				B6ED3EC866C0990A9CD0B12B /* Pods_MiddleMe.framework */,
 				4D5266272282338629CE9A05 /* Pods_MiddleMe_MiddleMeUITests.framework */,
 				C1B74FC90C5BE7FD4343F065 /* Pods_MiddleMeTests.framework */,
@@ -107,17 +138,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		88E785F6CC92A73D8EF6FEBF /* Pods */ = {
+		F3A69CA32AAE55D300B143CE /* OpenMultitouchSupport */ = {
 			isa = PBXGroup;
 			children = (
-				E778EE8E3C4D84613F24E1BE /* Pods-MiddleMe.debug.xcconfig */,
-				616814869F9884094BD5B62B /* Pods-MiddleMe.release.xcconfig */,
-				3B55219A5349C9D145F8BDB6 /* Pods-MiddleMe-MiddleMeUITests.debug.xcconfig */,
-				B440BC222EAF3CAF0918F096 /* Pods-MiddleMe-MiddleMeUITests.release.xcconfig */,
-				2CC4C11E8608F35A091768A9 /* Pods-MiddleMeTests.debug.xcconfig */,
-				4517BFAE59AAC6E3151724F0 /* Pods-MiddleMeTests.release.xcconfig */,
+				F3A69CA82AAE55D300B143CE /* OpenMultitouchSupport.h */,
+				F3A69CA72AAE55D300B143CE /* OpenMTInternal.h */,
+				F3A69CB02AAE55D300B143CE /* OpenMTEvent.h */,
+				F3A69CAE2AAE55D300B143CE /* OpenMTEventInternal.h */,
+				F3A69CAA2AAE55D300B143CE /* OpenMTEvent.m */,
+				F3A69CAB2AAE55D300B143CE /* OpenMTTouch.h */,
+				F3A69CA62AAE55D300B143CE /* OpenMTTouchInternal.h */,
+				F3A69CA52AAE55D300B143CE /* OpenMTTouch.m */,
+				F3A69CA42AAE55D300B143CE /* OpenMTListener.h */,
+				F3A69CAD2AAE55D300B143CE /* OpenMTListenerInternal.h */,
+				F3A69CAC2AAE55D300B143CE /* OpenMTListener.m */,
+				F3A69CB22AAE55D300B143CE /* OpenMTManager.h */,
+				F3A69CAF2AAE55D300B143CE /* OpenMTManagerInternal.h */,
+				F3A69CA92AAE55D300B143CE /* OpenMTManager.m */,
 			);
-			path = Pods;
+			path = OpenMultitouchSupport;
 			sourceTree = "<group>";
 		};
 		F3CE2C9D283FFCB30081B57D = {
@@ -128,7 +167,6 @@
 				F3CE2CBA283FFCB50081B57D /* MiddleMeTests */,
 				F3CE2CC4283FFCB50081B57D /* MiddleMeUITests */,
 				F3CE2CA7283FFCB30081B57D /* Products */,
-				88E785F6CC92A73D8EF6FEBF /* Pods */,
 				0D3CD19745BF1FA4FE5BA91E /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -147,11 +185,13 @@
 			isa = PBXGroup;
 			children = (
 				F303CA8E28403A61002B603D /* Info.plist */,
+				F3A69CA12AAE546900B143CE /* MiddleMe-Bridging-Header.h */,
 				F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */,
 				F3CE2CD828400E250081B57D /* GlobalEventMonitor.swift */,
 				F3795EA22AA53FD8006AFC22 /* Logger.swift */,
 				F3CE2CD628400C7B0081B57D /* Settings.swift */,
 				F3CE2CAB283FFCB30081B57D /* ContentView.swift */,
+				F3A69CA32AAE55D300B143CE /* OpenMultitouchSupport */,
 				F3CE2CAD283FFCB40081B57D /* Assets.xcassets */,
 				F3CE2CB2283FFCB40081B57D /* MiddleMe.entitlements */,
 				F3CE2CAF283FFCB40081B57D /* Preview Content */,
@@ -191,11 +231,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3CE2CCB283FFCB50081B57D /* Build configuration list for PBXNativeTarget "MiddleMe" */;
 			buildPhases = (
-				CE5C52D510C90D934B42FF30 /* [CP] Check Pods Manifest.lock */,
 				F3CE2CA2283FFCB30081B57D /* Sources */,
 				F3CE2CA3283FFCB30081B57D /* Frameworks */,
 				F3CE2CA4283FFCB30081B57D /* Resources */,
-				C69B2D432C63391AB208D63E /* [CP] Embed Pods Frameworks */,
+				F3685AEA2AAE513500901633 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,23 +382,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C69B2D432C63391AB208D63E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MiddleMe/Pods-MiddleMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MiddleMe/Pods-MiddleMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiddleMe/Pods-MiddleMe-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CBB2E098F47FE74328CF6A5F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,28 +398,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MiddleMe-MiddleMeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE5C52D510C90D934B42FF30 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MiddleMe-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -428,6 +428,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A69CA22AAE54B400B143CE /* MiddleMe-Bridging-Header.h in Sources */,
+				F37B36232AAE58900054E184 /* OpenMTTouch.m in Sources */,
+				F37B36242AAE58920054E184 /* OpenMTManager.m in Sources */,
+				F37B36252AAE58940054E184 /* OpenMTEvent.m in Sources */,
+				F37B36262AAE58960054E184 /* OpenMTListener.m in Sources */,
 				F3795EA32AA53FD8006AFC22 /* Logger.swift in Sources */,
 				F3CE2CD928400E250081B57D /* GlobalEventMonitor.swift in Sources */,
 				F3CE2CAC283FFCB30081B57D /* ContentView.swift in Sources */,
@@ -598,7 +603,6 @@
 		};
 		F3CE2CCC283FFCB50081B57D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E778EE8E3C4D84613F24E1BE /* Pods-MiddleMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -626,13 +630,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MiddleMe/MiddleMe-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Debug;
 		};
 		F3CE2CCD283FFCB50081B57D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 616814869F9884094BD5B62B /* Pods-MiddleMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -660,13 +668,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MiddleMe/MiddleMe-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 			};
 			name = Release;
 		};
 		F3CE2CCF283FFCB50081B57D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CC4C11E8608F35A091768A9 /* Pods-MiddleMeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -685,7 +697,6 @@
 		};
 		F3CE2CD0283FFCB50081B57D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4517BFAE59AAC6E3151724F0 /* Pods-MiddleMeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -704,7 +715,6 @@
 		};
 		F3CE2CD2283FFCB50081B57D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B55219A5349C9D145F8BDB6 /* Pods-MiddleMe-MiddleMeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -721,7 +731,6 @@
 		};
 		F3CE2CD3283FFCB50081B57D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B440BC222EAF3CAF0918F096 /* Pods-MiddleMe-MiddleMeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

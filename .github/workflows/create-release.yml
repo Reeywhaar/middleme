@@ -38,11 +38,8 @@ jobs:
           NOTARY_TOOL_PASS: ${{ secrets.NOTARY_TOOL_PASS }}
           TEAM_ID: ${{ secrets.TEAM_ID }}
 
-      - name: "Install pods"
-        run: pod install
-
       - name: "Archive"
-        run: xcodebuild -workspace MiddleMe.xcworkspace -scheme MiddleMe -configuration Release archive -archivePath middleme.xcarchive
+        run: xcodebuild -project MiddleMe.xcodeproj -scheme MiddleMe -configuration Release archive -archivePath middleme.xcarchive
 
       - name: "Zip App"
         run: pushd middleme.xcarchive/Products/Applications && zip --symlinks -r ../../../MiddleMe.zip MiddleMe.app && popd
