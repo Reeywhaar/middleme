@@ -22,7 +22,9 @@ struct MiddleMeApp: App {
         handler.register()
 
         appLogger.info("Registering login item")
+        #if !DEBUG
         try? SMAppService.mainApp.register()
+        #endif
 
         NotificationCenter.default.addObserver(forName: NSApplication.willTerminateNotification, object: nil, queue: .main, using: self.handleTerminate)
     }
@@ -48,7 +50,9 @@ struct MiddleMeApp: App {
     private func handleTerminate(notification: Notification) {
         if(appDelegate.activeExit) {
             appLogger.info("Unregistering login item")
+            #if !DEBUG
             try? SMAppService.mainApp.unregister()
+            #endif
         }
     }
 }

@@ -69,9 +69,7 @@ class GlobalEventMonitor {
         maxTouches = max(maxTouches, touchesCount)
         
         if(ended) {
-            
             let ismiddle = touchesInterval <= 44 && maxTouches == 3
-            
             
             if ismiddle {
                 let distance = distance(startCoordinates, lastCoordinates)
@@ -92,7 +90,7 @@ class GlobalEventMonitor {
         guard let screen = getCurrentScreen() else { return }
         
         #if DEBUG
-        print("TAP!", screen.localizedName, NSEvent.mouseLocation, screen.frame.minY)
+        print("TAP!", screen.localizedName, NSEvent.mouseLocation)
         #else
         var position = NSEvent.mouseLocation
         position.y = screen.frame.height - (position.y - screen.frame.minY)

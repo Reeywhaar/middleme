@@ -19,10 +19,18 @@ class Settings: ObservableObject {
         let options = [checkOptPrompt: true]
         //translate into boolean value
         
+        #if DEBUG
+        permissionGranted = true
+        #else
         permissionGranted = AXIsProcessTrustedWithOptions(options as CFDictionary?)
+        #endif
     }
     
     public func checkAccess(){
+        #if DEBUG
+        permissionGranted = true
+        #else
         permissionGranted = AXIsProcessTrusted()
+        #endif
     }
 }
