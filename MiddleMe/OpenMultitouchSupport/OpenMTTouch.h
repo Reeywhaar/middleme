@@ -12,31 +12,11 @@
 #import <Foundation/Foundation.h>
 #import "OpenMTInternal.h"
 
-typedef NS_ENUM(NSUInteger, OpenMTState) {
-    OpenMTStateNotTouching = 0,
-    OpenMTStateStarting,
-    OpenMTStateHovering,
-    OpenMTStateMaking,
-    OpenMTStateTouching,
-    OpenMTStateBreaking,
-    OpenMTStateLingering,
-    OpenMTStateLeaving
-};
-
 @interface OpenMTTouch: NSObject
 
 - (id)initWithMTTouch:(MTTouch *)touch;
 
-//@property (assign, readonly) int identifier;
-//@property (assign, readonly) OpenMTState state;
 @property (assign, readonly) float posX, posY;
-//@property (assign, readonly) float velX, velY;
-//@property (assign, readonly) float total;
-//@property (assign, readonly) float pressure;
-//@property (assign, readonly) float minorAxis, majorAxis;
-//@property (assign, readonly) float angle;
-//@property (assign, readonly) float density;
-//@property (assign, readonly) double timestamp;
 
 @end
 

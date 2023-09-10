@@ -215,16 +215,8 @@ static void contactEventHandler(MTDeviceRef eventDevice, MTTouch eventTouches[],
     
     OpenMTEvent *event = OpenMTEvent.new;
     event.touches = touches;
-    event.deviceID = (int)eventDevice;
-    event.frameID = frame;
-    event.timestamp = timestamp;
     
     [OpenMTManager.sharedManager handleMultitouchEvent:event];
 }
-
-//static void pathEventHandler(MTDeviceRef device, long pathID, long state, MTTouch* touch) {
-//    OpenMTTouch *otouch = [[OpenMTTouch alloc] initWithMTTouch:touch];
-//    [OpenMTManager.sharedManager handlePathEvent:otouch];
-//}
 
 @end
