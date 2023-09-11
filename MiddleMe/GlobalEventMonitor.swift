@@ -52,14 +52,15 @@ class GlobalEventMonitor {
         listener = nil
     }
     
-    @objc func process(_ event: OpenMTEvent) {
-        guard let touches = event.touches as NSArray as? [OpenMTTouch] else { return }
+    @objc func process(_ count: Int, _ touches: UnsafePointer<MTTouch>) {
+        let buffer = UnsafeBufferPointer(start: touches, count: count);
+        let touches = Array(buffer)
         let touchesCount = touches.count
         
         let ended = touchesCount == 0
         
         if touchesCount == 3 {
-            lastCoordinates = averageCoordinates(coords: touches.map({ NSPoint(x: CGFloat($0.posX), y: CGFloat($0.posY)) }))
+            lastCoordinates = averageCoordinates(coords: touches.map({ NSPoint(x: CGFloat($0.normalizedPosition.position.x), y: CGFloat($0.normalizedPosition.position.y)) }))
             if startCoordinates == .zero { startCoordinates = lastCoordinates }
         }
         

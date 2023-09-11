@@ -12,7 +12,6 @@
 #import <Foundation/Foundation.h>
 
 #import "OpenMTListener.h"
-#import "OpenMTEvent.h"
 
 @interface OpenMTManager: NSObject
 

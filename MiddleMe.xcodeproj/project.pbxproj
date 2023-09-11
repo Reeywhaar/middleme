@@ -13,9 +13,7 @@
 		F3685AE82AAE513500901633 /* MultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3685AE72AAE513400901633 /* MultitouchSupport.framework */; };
 		F3685AE92AAE513500901633 /* MultitouchSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3685AE72AAE513400901633 /* MultitouchSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F3795EA32AA53FD8006AFC22 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3795EA22AA53FD8006AFC22 /* Logger.swift */; };
-		F37B36232AAE58900054E184 /* OpenMTTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CA52AAE55D300B143CE /* OpenMTTouch.m */; };
 		F37B36242AAE58920054E184 /* OpenMTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CA92AAE55D300B143CE /* OpenMTManager.m */; };
-		F37B36252AAE58940054E184 /* OpenMTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CAA2AAE55D300B143CE /* OpenMTEvent.m */; };
 		F37B36262AAE58960054E184 /* OpenMTListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CAC2AAE55D300B143CE /* OpenMTListener.m */; };
 		F3A69CA22AAE54B400B143CE /* MiddleMe-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = F3A69CA12AAE546900B143CE /* MiddleMe-Bridging-Header.h */; };
 		F3CE2CAA283FFCB30081B57D /* MiddleMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */; };
@@ -71,15 +69,12 @@
 		F3795EA22AA53FD8006AFC22 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F3A69CA12AAE546900B143CE /* MiddleMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiddleMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		F3A69CA42AAE55D300B143CE /* OpenMTListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTListener.h; sourceTree = "<group>"; };
-		F3A69CA52AAE55D300B143CE /* OpenMTTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTTouch.m; sourceTree = "<group>"; };
 		F3A69CA72AAE55D300B143CE /* OpenMTInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTInternal.h; sourceTree = "<group>"; };
 		F3A69CA82AAE55D300B143CE /* OpenMultitouchSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMultitouchSupport.h; sourceTree = "<group>"; };
 		F3A69CA92AAE55D300B143CE /* OpenMTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTManager.m; sourceTree = "<group>"; };
-		F3A69CAA2AAE55D300B143CE /* OpenMTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTEvent.m; sourceTree = "<group>"; };
-		F3A69CAB2AAE55D300B143CE /* OpenMTTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTTouch.h; sourceTree = "<group>"; };
 		F3A69CAC2AAE55D300B143CE /* OpenMTListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenMTListener.m; sourceTree = "<group>"; };
-		F3A69CB02AAE55D300B143CE /* OpenMTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTEvent.h; sourceTree = "<group>"; };
 		F3A69CB22AAE55D300B143CE /* OpenMTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenMTManager.h; sourceTree = "<group>"; };
+		F3B91DD82AAFAE9500079D3B /* OpenMTPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenMTPublic.h; sourceTree = "<group>"; };
 		F3CE2CA6283FFCB30081B57D /* MiddleMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiddleMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2CA9283FFCB30081B57D /* MiddleMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleMeApp.swift; sourceTree = "<group>"; };
 		F3CE2CAB283FFCB30081B57D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,10 +134,7 @@
 			children = (
 				F3A69CA82AAE55D300B143CE /* OpenMultitouchSupport.h */,
 				F3A69CA72AAE55D300B143CE /* OpenMTInternal.h */,
-				F3A69CB02AAE55D300B143CE /* OpenMTEvent.h */,
-				F3A69CAA2AAE55D300B143CE /* OpenMTEvent.m */,
-				F3A69CAB2AAE55D300B143CE /* OpenMTTouch.h */,
-				F3A69CA52AAE55D300B143CE /* OpenMTTouch.m */,
+				F3B91DD82AAFAE9500079D3B /* OpenMTPublic.h */,
 				F3A69CA42AAE55D300B143CE /* OpenMTListener.h */,
 				F3A69CAC2AAE55D300B143CE /* OpenMTListener.m */,
 				F3A69CB22AAE55D300B143CE /* OpenMTManager.h */,
@@ -421,9 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3A69CA22AAE54B400B143CE /* MiddleMe-Bridging-Header.h in Sources */,
-				F37B36232AAE58900054E184 /* OpenMTTouch.m in Sources */,
 				F37B36242AAE58920054E184 /* OpenMTManager.m in Sources */,
-				F37B36252AAE58940054E184 /* OpenMTEvent.m in Sources */,
 				F37B36262AAE58960054E184 /* OpenMTListener.m in Sources */,
 				F3795EA32AA53FD8006AFC22 /* Logger.swift in Sources */,
 				F3CE2CD928400E250081B57D /* GlobalEventMonitor.swift in Sources */,

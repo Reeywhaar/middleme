@@ -10,8 +10,6 @@
 
 #import "OpenMTManager.h"
 #import "OpenMTListener.h"
-#import "OpenMTTouch.h"
-#import "OpenMTEvent.h"
 #import "OpenMTInternal.h"
 
 @interface OpenMTManager()
@@ -106,11 +104,7 @@
     // MTPrintImageRegionDescriptors(self.device); work
 }
 
-//- (void)handlePathEvent:(OpenMTTouch *)touch {
-//    NSLog(@"%@", touch.description);
-//}
-
-- (void)handleMultitouchEvent:(OpenMTEvent *)event {
+- (void)handleCount:(int)numTouches touches:(MTTouch [])eventTouches {
     for (int i = 0; i < (int)self.listeners.count; i++) {
         OpenMTListener *listener = self.listeners[i];
         if (listener.dead) {
@@ -121,7 +115,7 @@
             continue;
         }
         dispatchResponse(^{
-            [listener listenToEvent:event];
+            [listener count:numTouches touches:eventTouches];
         });
     }
 }
@@ -205,18 +199,8 @@ static void dispatchResponse(dispatch_block_t block) {
     dispatch_sync(responseQueue, block);
 }
 
-static void contactEventHandler(MTDeviceRef eventDevice, MTTouch eventTouches[], int numTouches, double timestamp, int frame) {
-    NSMutableArray *touches = [NSMutableArray array];
-    
-    for (int i = 0; i < numTouches; i++) {
-        OpenMTTouch *touch = [[OpenMTTouch alloc] initWithMTTouch:&eventTouches[i]];
-        [touches addObject:touch];
-    }
-    
-    OpenMTEvent *event = OpenMTEvent.new;
-    event.touches = touches;
-    
-    [OpenMTManager.sharedManager handleMultitouchEvent:event];
+static void contactEventHandler(MTDeviceRef eventDevice, MTTouch touches[], int numTouches, double timestamp, int frame) {
+    [OpenMTManager.sharedManager handleCount:numTouches touches:touches];
 }
 
 @end

@@ -13,5 +13,4 @@ FOUNDATION_EXPORT const unsigned char OpenMultitouchSupportVersionString[];
 
 #import "OpenMTManager.h"
 #import "OpenMTListener.h"
-#import "OpenMTEvent.h"
-#import "OpenMTTouch.h"
+#import "OpenMTPublic.h"

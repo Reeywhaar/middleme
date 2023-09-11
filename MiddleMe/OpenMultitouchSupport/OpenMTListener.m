@@ -7,6 +7,7 @@
 //
 
 #import "OpenMTListener.h"
+#import "OpenMTInternal.h"
 
 @implementation OpenMTListener {
 @private
@@ -30,16 +31,16 @@
     return self;
 }
 
-- (void)listenToEvent:(OpenMTEvent *)event {
+- (void)count:(int)numTouches touches:(MTTouch [])touches {
     if (self.dead || !self.listening) {
         return;
     }
     if (_callback) {
-        _callback(event);
+        _callback(touches);
         return;
     }
     if (_target) {
-        ((void(*)(id, SEL, OpenMTEvent*))[_target methodForSelector:_selector])(_target, _selector, event);
+        ((void(*)(id, SEL, int, MTTouch[]))[_target methodForSelector:_selector])(_target, _selector, numTouches, touches);
         return;
     }
 }
