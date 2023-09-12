@@ -38,12 +38,14 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let s1 = Settings()
-        let s2 = Settings()
-        let _ = {s2.permissionGranted = true}()
-        
-        ContentView().environmentObject(s1)
-        ContentView().environmentObject(s2)
+        ContentView().environmentObject(makeSettings(false))
+        ContentView().environmentObject(makeSettings(true))
+    }
+    
+    static func makeSettings(_ granted: Bool) -> Settings {
+        let settings = Settings()
+        settings.permissionGranted = granted
+        return settings
     }
 }
 

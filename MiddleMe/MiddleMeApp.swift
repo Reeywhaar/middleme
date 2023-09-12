@@ -16,15 +16,23 @@ struct MiddleMeApp: App {
     private let settings = Settings()
 
     private let handler = GlobalEventMonitor()
+    private let isPreview = ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1"
+    #if DEBUG
+    private let isDebug = true
+    #else
+    private let isDebug = true
+    #endif
 
     init() {
+        if isPreview { return }
+        
         handler.start()
         handler.register()
 
         appLogger.info("Registering login item")
-        #if !DEBUG
-        try? SMAppService.mainApp.register()
-        #endif
+        if !isPreview && !isDebug {
+            try? SMAppService.mainApp.register()
+        }
 
         NotificationCenter.default.addObserver(forName: NSApplication.willTerminateNotification, object: nil, queue: .main, using: self.handleTerminate)
     }
@@ -41,6 +49,8 @@ struct MiddleMeApp: App {
                 settings.checkAccess()
             }
             .onAppear {
+                if isPreview { return }
+                
                 appLogger.info("Making app active")
                 NSApplication.shared.activate(ignoringOtherApps: true)
             }
@@ -50,9 +60,9 @@ struct MiddleMeApp: App {
     private func handleTerminate(notification: Notification) {
         if(appDelegate.activeExit) {
             appLogger.info("Unregistering login item")
-            #if !DEBUG
-            try? SMAppService.mainApp.unregister()
-            #endif
+            if !isPreview && !isDebug {
+                try? SMAppService.mainApp.unregister()
+            }
         }
     }
 }
