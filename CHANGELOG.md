@@ -1,3 +1,7 @@
+# 1.8
+
+- Removed redundant code
+
 # 1.7
 
 - Removed redundant and unused code
