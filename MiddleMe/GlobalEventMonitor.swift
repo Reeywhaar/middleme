@@ -92,8 +92,7 @@ class GlobalEventMonitor {
         #if DEBUG
         print("TAP!", screen.localizedName, NSEvent.mouseLocation)
         #else
-        var position = NSEvent.mouseLocation
-        position.y = screen.frame.height - (position.y - screen.frame.minY)
+        let position = cgPoint(from: NSEvent.mouseLocation, forScreen: screen)
         let source = CGEventSource.init(stateID: .hidSystemState)
         let eventDown = CGEvent(mouseEventSource: source, mouseType: .otherMouseDown, mouseCursorPosition: position , mouseButton: .center)
         let eventUp = CGEvent(mouseEventSource: source, mouseType: .otherMouseUp, mouseCursorPosition: position , mouseButton: .center)
@@ -109,6 +108,30 @@ class GlobalEventMonitor {
         let screenWithMouse = (screens.first { NSMouseInRect(mouseLocation, $0.frame, false) })
 
         return screenWithMouse
+    }
+    
+    private func computeOffsets(for screen: NSScreen, primaryScreen: NSScreen) -> (CGFloat, CGFloat) {
+        var offsetLeft = screen.frame.origin.x
+        var offsetTop = primaryScreen.frame.size.height - (screen.frame.origin.y + screen.frame.size.height)
+
+        if screen == primaryScreen {
+            offsetTop = 0
+            offsetLeft = 0
+        }
+
+        return (offsetLeft, offsetTop)
+    }
+        
+    private func cgPoint(from cgpoint: CGPoint, forScreen: NSScreen?) -> CGPoint {
+        guard let screen = forScreen,
+              let primaryScreen = NSScreen.screens.first
+        else {
+            return CGPoint(x: cgpoint.x, y: cgpoint.y)
+        }
+
+        let (_, offsetTop) = computeOffsets(for: screen, primaryScreen: primaryScreen)
+        let menuScreenHeight = screen.frame.maxY
+        return CGPoint(x: cgpoint.x, y: menuScreenHeight - cgpoint.y + offsetTop)
     }
     
     private func averageCoordinates(coords: [NSPoint]) -> NSPoint {
