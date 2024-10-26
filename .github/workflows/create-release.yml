@@ -8,6 +8,8 @@ jobs:
   release:
     name: "Release"
     runs-on: macos-12
+    permissions:
+      contents: write
     steps:
       - name: "Checkout"
         uses: actions/checkout@v1
@@ -60,7 +62,7 @@ jobs:
           path: cask.env
 
       - name: "Create Release"
-        uses: softprops/action-gh-release@78c309ef59fdb9557cd6574f2e0be552936ed728
+        uses: softprops/action-gh-release@cd8b57e57218a24af14e307ad8491ec133804ef1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
