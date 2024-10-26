@@ -1,3 +1,7 @@
+# 1.9
+
+- Merged pull request that fixes point coordinates on external screen
+
 # 1.8
 
 - Removed redundant code
