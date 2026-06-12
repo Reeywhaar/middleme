@@ -1,16 +1,25 @@
-def main
-  file = ARGV[0]
-  version = ARGV[1]
-  sha = ARGV[2]
+abort "Usage: #{$0} <cask_path> <version> <sha256>" unless ARGV.length == 3
 
-  content = File.read(file)
-  content = content.gsub(/# version-placeholder\n.*$/, "# version-placeholder\n  version \"#{version}\"")
-  content = content.gsub(/# sha256-placeholder\n.*$/, "# sha256-placeholder\n  sha256 \"#{sha}\"")
-  content = content.gsub(/^\s+revision.*$/, "")
+file, version, sha = ARGV
 
-  File.open(file, "w") do |f|
-    f.write(content)
+abort "Invalid SHA-256: #{sha}" unless sha.match?(/\A[a-f0-9]{64}\z/)
+
+content = <<~RUBY
+  cask "middleme" do
+    version "#{version}"
+    sha256 "#{sha}"
+
+    url "https://github.com/Reeywhaar/middleme/releases/download/\#{version}/MiddleMe.zip"
+    name "MiddleMe"
+    desc "Simple app to make trackpad treat triple tap as middle click"
+    homepage "https://github.com/Reeywhaar/MiddleMe"
+
+    app "MiddleMe.app"
+
+    uninstall quit: "com.vyrtsev.mac.MiddleMe"
+    uninstall login_item: "MiddleMe"
   end
-end
+RUBY
 
-main
+File.write(file, content)
+puts "Written #{file} (middleme #{version})"
