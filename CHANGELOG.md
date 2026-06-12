@@ -1,3 +1,8 @@
+# 1.10
+
+- Reworked start on login: register on launch, unregister on quit
+- Fix release workflow and update actions
+
 # 1.9
 
 - Merged pull request that fixes point coordinates on external screen
