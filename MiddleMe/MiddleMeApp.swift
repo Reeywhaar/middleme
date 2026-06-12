@@ -20,12 +20,12 @@ struct MiddleMeApp: App {
     #if DEBUG
     private let isDebug = true
     #else
-    private let isDebug = true
+    private let isDebug = false
     #endif
 
     init() {
         if isPreview { return }
-        
+
         handler.start()
         handler.register()
 
@@ -50,7 +50,7 @@ struct MiddleMeApp: App {
             }
             .onAppear {
                 if isPreview { return }
-                
+
                 appLogger.info("Making app active")
                 NSApplication.shared.activate(ignoringOtherApps: true)
             }
