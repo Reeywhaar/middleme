@@ -37,7 +37,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         self.listeners = NSMutableArray.new;
-        
+
         [NSWorkspace.sharedWorkspace.notificationCenter addObserver:self selector:@selector(willSleep:) name:NSWorkspaceWillSleepNotification object:nil];
         [NSWorkspace.sharedWorkspace.notificationCenter addObserver:self selector:@selector(didWakeUp:) name:NSWorkspaceDidWakeNotification object:nil];
     }
@@ -46,30 +46,29 @@
 
 - (MTDeviceRef)findDevice {
     if (!MTDeviceIsAvailable()) return nil;
-        
-    NSMutableArray* list = (__bridge NSMutableArray*)MTDeviceCreateList();
-    
-    for(int i = 0; i<[list count]; i++) //iterate available devices
-    {
-        MTDeviceRef device = (__bridge MTDeviceRef)(list[i]);
-        
+
+    NSArray *list = (__bridge NSArray *)MTDeviceCreateList();
+
+    for (id item in list) {
+        MTDeviceRef device = (__bridge MTDeviceRef)item;
+
         int width, height;
         OSStatus err = MTDeviceGetSensorSurfaceDimensions(device, &width, &height);
         if (err) continue;
-        
+
         float ratio = (float)width/(float)height;
-        
+
         // Ignore touchbar
         if (ratio < 5.0) return device;
     }
-    
+
     return nil;
 }
 
 - (void)makeDevice {
     self.device = [self findDevice];
     if(self.device == nil) return;
-    
+
     uuid_t guid;
     OSStatus err = MTDeviceGetGUID(self.device, &guid);
     if (!err) {
@@ -101,14 +100,16 @@
     bool isOpaque = MTDeviceIsOpaqueSurface(self.device);
     NSLog(isOpaque ? @"Opaque: true" : @"Opaque: false");
 
-    // MTPrintImageRegionDescriptors(self.device); work
+    // MTPrintImageRegionDescriptors(self.device); not work
 }
 
 - (void)handleCount:(int)numTouches touches:(MTTouch [])eventTouches {
-    for (int i = 0; i < (int)self.listeners.count; i++) {
-        OpenMTListener *listener = self.listeners[i];
+    NSArray *snapshot = [self.listeners copy];
+    NSMutableArray *dead = nil;
+    for (OpenMTListener *listener in snapshot) {
         if (listener.dead) {
-            [self removeListener:listener];
+            if (!dead) dead = [NSMutableArray new];
+            [dead addObject:listener];
             continue;
         }
         if (!listener.listening) {
@@ -118,9 +119,13 @@
             [listener count:numTouches touches:eventTouches];
         });
     }
+    for (OpenMTListener *listener in dead) {
+        [self removeListener:listener];
+    }
 }
 
 - (void)startHandlingMultitouchEvents {
+    if (self.device != nil) { return; }
     [self makeDevice];
     @try {
         MTRegisterContactFrameCallback(self.device, contactEventHandler); // work
@@ -134,15 +139,20 @@
 }
 
 - (void)stopHandlingMultitouchEvents {
-    if (!MTDeviceIsRunning(self.device)) { return; }
+    if (self.device == nil || !MTDeviceIsRunning(self.device)) {
+        self.device = nil;
+        return;
+    }
     @try {
         MTUnregisterContactFrameCallback(self.device, contactEventHandler); // work
         // MTUnregisterPathCallback(self.device, pathEventHandler); // work
         // MTUnregisterImageCallback(self.device, MTImagePrintCallback); // not work
         MTDeviceStop(self.device);
         MTDeviceRelease(self.device);
+        self.device = nil;
     } @catch (NSException *exception) {
         NSLog(@"Failed Stop Handling Multitouch Events");
+        self.device = nil;
     }
 }
 
