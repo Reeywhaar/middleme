@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Configure certificates"
         run: >
@@ -56,7 +56,7 @@ jobs:
           VERSION=$(sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' ./MiddleMe.xcodeproj/project.pbxproj) && \
           echo "ARTEFACT_VERSION=$(echo $VERSION)" >> cask.env
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: cask.env
           path: cask.env
@@ -72,8 +72,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: release
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v8
         with:
           name: cask.env
       - name: Set git identity
@@ -83,7 +83,7 @@ jobs:
       - name: Load cask env
         run: |
           cat cask.env >> $GITHUB_ENV
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: main
           path: tap
