@@ -1,3 +1,7 @@
+# 1.11
+
+- Fix leaks that could manifest in app stops working or exits
+
 # 1.10
 
 - Reworked start on login: register on launch, unregister on quit
